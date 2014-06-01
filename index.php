@@ -8,7 +8,7 @@
 		$userid = $_COOKIE['userid'];
 	}
 
-	if(isset($_POST["kill"])){
+	if(isset($_GET["kill"])){
 		setcookie("userid", "", strtotime('-1 year'));
 	}
  ?>
@@ -27,7 +27,8 @@
 	<form method="post">
 		<input type="text" name="name"/>
 		<input type="submit" value="Submit">
+
 	</form>
-	<button type="button" value="kill">Kill Cookie</button>
+	<button type="button" value="kill" onclick = "window.location.href='?kill='">Kill Cookie</button>
 </body>
 </html> 
